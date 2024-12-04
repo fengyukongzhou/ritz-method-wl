@@ -35,7 +35,8 @@ RitzSolver[{n, m}, {bf, bc, region, pr}, {x, y}]
 - `region`: Geometry (e.g., `Disk[]`, `Rectangle[]`, or custom polygons).
 - `pr`: Poisson's ratio.
 
-#### Example:
+Example:
+
 Solve for the first 3 modes of a clamped circular plate:
 ```wolfram
 RitzSolver[{5, 3}, {(1 - x^2 - y^2)^2, 2, Disk[], 0.3}, {x, y}]
@@ -43,7 +44,29 @@ RitzSolver[{5, 3}, {(1 - x^2 - y^2)^2, 2, Disk[], 0.3}, {x, y}]
 
 ---
 
-### 2. Predefined Geometries
+### 2. Simplified Solver for Clamped Boundaries
+Solve PDEs specifically for clamped boundary conditions with simplified input.
+
+```wolfram
+RitzSolver[{n, m}, {bf, region}, {x, y}]
+```
+
+- n: Number of basis functions in x-direction.
+- m: Number of modes to compute.
+- bf: Boundary function (e.g., (1 - x^2 - y^2)^2 for a clamped circular plate).
+- region: Geometry (e.g., Disk[], Rectangle[], or custom polygons).
+
+Example:
+
+Solve for the first 3 modes of a clamped circular plate:
+
+```wolfram
+RitzSolver[{5, 3}, {(1 - x^2 - y^2)^2, Disk[]}, {x, y}]
+```
+
+---
+
+### 3. Predefined Geometries
 Retrieve cached modal solutions for common shapes.
 
 ```wolfram
@@ -54,11 +77,13 @@ RitzSolver["geometry", {x, y}]
 - `"Square"`: Square plate.  
 - `"Hexagon"`: Hexagonal plate.
 
-#### Example:
+Example:
+
 Retrieve the first mode of a square plate:
 ```wolfram
 RitzSolver["Square", {x, y}]
 ```
+
 ---
 
 ## Examples
