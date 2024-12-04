@@ -1,7 +1,7 @@
 (* ::Package:: *)
 
 (* ::Package:: *)
-(* DRMSolver.wl *)
+(* RitzSolver.wl*)
 
 
 BeginPackage["RitzSolver`"]
