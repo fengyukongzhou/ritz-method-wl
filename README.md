@@ -10,11 +10,11 @@
 
 ## Installation
 
-1. Download `RitzSolver.wl` and save it to your working directory or a directory in `$Path`.
+1. Download `RitzMethod.wl` or `RitzMethod-EN.wl`and save it to your working directory or a directory in `$Path`.
 2. Load the package:
 
    ```wolfram
-   << RitzSolver.wl
+   << RitzMethod.wl
    ```
 
 ---
